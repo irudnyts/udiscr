@@ -1,3 +1,4 @@
+#' @export
 extended_pearson_tukey <- function(q_fun, params) {
     q <- function(p) {
         args <- params

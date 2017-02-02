@@ -2,3 +2,5 @@
 
 export(bracket_mean)
 export(bracket_median)
+export(extended_pearson_tukey)
+export(extended_swanson_megill)
