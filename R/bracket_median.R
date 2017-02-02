@@ -49,14 +49,3 @@ bracket_median <- function(n = 3, p = rep(1 / n, n), q_fun, params) {
 
     return(discr)
 }
-
-# uvt_bracket_median(n = 3, q_fun = qexp, params = list(rate = 1))
-# uvt_bracket_median(n = 3, q_fun = qexp, params = list())
-# uvt_bracket_median(n = 3, q_fun = qexp)
-#
-# uvt_bracket_median(q_fun = qexp, params = list(rate = 1))
-# uvt_bracket_median(n = 3, q_fun = qexp, params = list(rate = 1))
-# uvt_bracket_median(n = 3, p = c(1/2), q_fun = qexp, params = list(rate = 1))
-#
-#
-# uvt_bracket_median(n = 3, p = c(1/3, 1/3, 1/3), q_fun = qexp, params = list(rate = 1))
