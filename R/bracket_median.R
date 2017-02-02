@@ -1,6 +1,5 @@
 #' @export
-uvt_bracket_median <- function(n = 3, p = rep(1 / n, n), q_fun, params) {
-
+bracket_median <- function(n = 3, p = rep(1 / n, n), q_fun, params) {
 
     # check arguments
     if(!missing(n)) {
@@ -32,23 +31,13 @@ uvt_bracket_median <- function(n = 3, p = rep(1 / n, n), q_fun, params) {
 
     if(missing(params)) params <- list()
 
-    # generate cumulative probabilities
+    # generate probabilities at which quantiles will be calculated
     probs <- c(0, cumsum(p))
     probs <- probs[-length(probs)]
     probs <- probs + p * 1 / 2
 
-    # calculate quantiles of cumulative probabilities
-#     discr <- list()
-#     for(i in seq_along(probs)) {
-#         args <- params
-#         args[["p"]] <- probs[i]
-#         discr[[i]] <- list(prob = p[i],
-#                            point = do.call(what = q_fun, args = args))
-#
-#     }
-#     return(discr)
-#
-
+    # define quantile function, which includes all parameters and  depends only
+    # on probability
     q <- function(p) {
         args <- params
         args[["p"]] <- p
@@ -59,8 +48,6 @@ uvt_bracket_median <- function(n = 3, p = rep(1 / n, n), q_fun, params) {
                  q(probs), p)
 
     return(discr)
-
-
 }
 
 # uvt_bracket_median(n = 3, q_fun = qexp, params = list(rate = 1))

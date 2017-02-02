@@ -1,4 +1,5 @@
-uvt_bracket_mean <- function(n = 3, p = rep(1 / n, n), q_fun, d_fun, params) {
+#' @export
+bracket_mean <- function(n = 3, p = rep(1 / n, n), q_fun, d_fun, params) {
 
     # check arguments
     if(!missing(n)) {
@@ -32,15 +33,20 @@ uvt_bracket_mean <- function(n = 3, p = rep(1 / n, n), q_fun, d_fun, params) {
 
     cum_probs <- cumsum(p)
 
+    # define quantile function, which includes all parameters and  depends only
+    # on probability
     q <- function(p) {
         args <- params
         args[["p"]] <- p
         do.call(what = q_fun, args = args)
     }
 
+    # calculate lower and upper bounds of integrals by applying quantile
+    # function
     lower_bounds <- q(c(0, cum_probs[-length(cum_probs)]))
     upper_bounds <- q(cum_probs)
 
+    # integrated function, which icludes all parameters and depends only on x
     f <- function(x) {
         args <- params
         args[["x"]] <- x
@@ -56,7 +62,4 @@ uvt_bracket_mean <- function(n = 3, p = rep(1 / n, n), q_fun, d_fun, params) {
                                p[i])
     }
     return(discr)
-}
-
-mvt_bracket_mean <- function(n = 3, p, q_fun, params) {
 }
