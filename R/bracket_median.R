@@ -44,8 +44,8 @@ bracket_median <- function(n = 3, p = rep(1 / n, n), q_fun, params) {
         do.call(what = q_fun, args = args)
     }
 
-    discr <- Map(function(x, y) list(point = x, prob = y),
-                 q(probs), p)
+    discr <- Map(function(x, y) list(prob = x, point = y),
+                 p, q(probs))
 
     return(discr)
 }
