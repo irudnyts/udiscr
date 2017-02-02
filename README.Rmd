@@ -14,4 +14,4 @@ knitr::opts_chunk$set(
 )
 ```
 
-[![Travis-CI Build Status](https://travis-ci.org/irudnyts/udiscr.svg?branch=master)](https://travis-ci.org/irudnyts/udiscr)
+[![Travis-CI Build Status](https://travis-ci.com/irudnyts/udiscr.svg?token=Spwopnmy37EZMsL4nDza&branch=master)](https://travis-ci.com/irudnyts/udiscr.svg?token=Spwopnmy37EZMsL4nDza&branch=master)
