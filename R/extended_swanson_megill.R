@@ -26,6 +26,8 @@
 #'
 #' @export
 extended_swanson_megill <- function(q_fun, params) {
+    if(missing(params)) params <- list()
+
     q <- function(p) {
         args <- params
         args[["p"]] <- p

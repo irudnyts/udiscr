@@ -29,6 +29,8 @@
 #'
 #' @export
 extended_pearson_tukey <- function(q_fun, params) {
+    if(missing(params)) params <- list()
+
     q <- function(p) {
         args <- params
         args[["p"]] <- p
