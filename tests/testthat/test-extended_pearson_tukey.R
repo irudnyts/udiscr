@@ -8,7 +8,7 @@ test_that("extended_pearson_tukey checks argument params on validity corretly", 
     expect_error(extended_pearson_tukey(q_fun = qnorm, params = list(a = 1)))
 })
 
-test_that("bracket_mean returns corret result", {
+test_that("extended_pearson_tukey returns corret result", {
     # exponential
     rslt_3 <- list(list(prob = 0.185,
                         point = qexp(0.05)),
