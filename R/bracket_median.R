@@ -1,3 +1,40 @@
+#' Bracket-median approximation
+#'
+#' Returns a discrete approximation of a continuous distribution using
+#' bracket-median method.
+#'
+#' If \code{n} is specified, the function splits the range of possible values
+#' into \code{n} intervals by using 1/n, 2/n, ... (n-1)/n-quantiles. Otherwise,
+#' if \code{p} is specified, the range is split by corresponding cumulative
+#' probabilities quantiles. \code{q_fun} is used to calculate quantiles. Each
+#' interval is represented by pair of probability and median of the interval.
+#'
+#' @param n numeric of length 1; represents a number of intervals (or a number
+#'     of point of the approximation). Default value is 3. Either \code{n} or
+#'     \code{p} should be used.
+#' @param p numeric of length grater than 2; specifies the corresponding
+#'     probabilities of intervals. If \code{p} does not sum up to 1, will be
+#'     automatically standardized.
+#' @param q_fun quantile function.
+#' @param params a list of parameters of the distribution.
+#' @return a list of parirs probability-outcome.
+#'
+#' @examples
+#' bracket_median(n = 5, q_fun = qnorm, params = list(mean = 3, sd = 2))
+#' bracket_median(p = c(1/2, 1/3, 1/6), q_fun = qexp, params = list(rate = 1))
+#' bracket_median(q_fun = qnorm, d_fun = dnorm)
+#'
+#' @references \itemize{
+#' \item Miller III A.C., Rice T.R. \emph{Discrete Approximations of Probability
+#' Distributions}. Management Science, 29(3):352-362, 1983.
+#' \item Smith J.E. \emph{Moment Methods for Decision Analysis}. Management
+#' Science 39(3):340-358, 1993.
+#' \item Keefer D.L., Bodily S.E. \emph{Three-Point Approximations for
+#' Continuous Random Variables}. Management Science 29(5):595-609, 1983.
+#' }
+#'
+#' @seealso \code{\link{bracket_mean}}
+#'
 #' @export
 bracket_median <- function(n = 3, p = rep(1 / n, n), q_fun, params) {
 
