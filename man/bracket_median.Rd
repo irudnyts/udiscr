@@ -20,7 +20,7 @@ automatically standardized.}
 \item{params}{a list of parameters of the distribution.}
 }
 \value{
-a list of parirs probability-outcome.
+a list of pairs probability-outcome.
 }
 \description{
 Returns a discrete approximation of a continuous distribution using

@@ -20,7 +20,7 @@
 #' @param d_fun corresponding probability density function, which will be used
 #'     for integral estimation.
 #' @param params a list of parameters of the distribution.
-#' @return a list of parirs probability-outcome.
+#' @return a list of pairs probability-outcome.
 #'
 #' @examples
 #' bracket_mean(n = 5, q_fun = qnorm, d_fun = dnorm,

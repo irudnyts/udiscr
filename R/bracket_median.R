@@ -17,7 +17,7 @@
 #'     automatically standardized.
 #' @param q_fun quantile function.
 #' @param params a list of parameters of the distribution.
-#' @return a list of parirs probability-outcome.
+#' @return a list of pairs probability-outcome.
 #'
 #' @examples
 #' bracket_median(n = 5, q_fun = qnorm, params = list(mean = 3, sd = 2))
