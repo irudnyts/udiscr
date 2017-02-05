@@ -2,7 +2,7 @@
 % Please edit documentation in R/extended_pearson_tukey.R
 \name{extended_pearson_tukey}
 \alias{extended_pearson_tukey}
-\title{Extended Pearson-Tukey approximation}
+\title{Extended Pearson-Tukey Three-Point approximation}
 \usage{
 extended_pearson_tukey(q_fun, params)
 }

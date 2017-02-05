@@ -1,4 +1,4 @@
-#' Extended Pearson-Tukey approximation
+#' Extended Pearson-Tukey Three-Point approximation
 #'
 #' Returns a discrete approximation of a continuous distribution using
 #' extended Person-Tukey method.

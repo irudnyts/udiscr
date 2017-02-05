@@ -1,4 +1,4 @@
-#' Extended Swanson-Megill approximation
+#' Extended Swanson-Megill Three-Point approximation
 #'
 #' Returns a discrete approximation of a continuous distribution using
 #' extended Swanson-Megill method.

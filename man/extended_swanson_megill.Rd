@@ -2,7 +2,7 @@
 % Please edit documentation in R/extended_swanson_megill.R
 \name{extended_swanson_megill}
 \alias{extended_swanson_megill}
-\title{Extended Swanson-Megill approximation}
+\title{Extended Swanson-Megill Three-Point approximation}
 \usage{
 extended_swanson_megill(q_fun, params)
 }
