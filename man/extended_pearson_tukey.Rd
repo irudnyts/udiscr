@@ -40,6 +40,6 @@ Biometrika 52(3/4):533-546, 1965.
 }
 }
 \seealso{
-\code{\link{extended_swanson_megill}}
+\code{\link{extended_swanson_megill}}, \code{\link{mcnamee_celona}}
 }
 

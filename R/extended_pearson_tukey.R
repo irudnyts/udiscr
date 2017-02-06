@@ -25,7 +25,7 @@
 #' Biometrika 52(3/4):533-546, 1965.
 #' }
 #'
-#' @seealso \code{\link{extended_swanson_megill}}
+#' @seealso \code{\link{extended_swanson_megill}}, \code{\link{mcnamee_celona}}
 #'
 #' @export
 extended_pearson_tukey <- function(q_fun, params) {
