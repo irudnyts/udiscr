@@ -1,3 +1,6 @@
+#' @include p_functions.R
+NULL
+
 #' Bracket-median approximation
 #'
 #' Returns a discrete approximation of a continuous distribution using

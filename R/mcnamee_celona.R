@@ -1,3 +1,6 @@
+#' @include p_functions.R
+NULL
+
 #' McNamee-Celona "Srortcut" approximation
 #'
 #' Returns a discrete approximation of a continuous distribution using

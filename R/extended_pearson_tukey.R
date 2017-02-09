@@ -1,3 +1,6 @@
+#' @include p_functions.R
+NULL
+
 #' Extended Pearson-Tukey Three-Point approximation
 #'
 #' Returns a discrete approximation of a continuous distribution using

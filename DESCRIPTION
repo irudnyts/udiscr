@@ -12,8 +12,16 @@ Description: A set of tools for generating a discrete approximation of
 License: GPL-2
 LazyData: TRUE
 RoxygenNote: 5.0.1
-Suggests: testthat
+Suggests:
+    testthat
 Depends:
     R (>= 3.2)
 URL: http://github.com/irudnyts/udiscr
 BugReports: http://github.com/irudnyts/udiscr/issues
+Collate:
+    'p_functions.R'
+    'bracket_mean.R'
+    'bracket_median.R'
+    'extended_pearson_tukey.R'
+    'extended_swanson_megill.R'
+    'mcnamee_celona.R'
