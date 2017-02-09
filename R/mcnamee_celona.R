@@ -1,7 +1,7 @@
 #' @include p_functions.R
 NULL
 
-#' McNamee-Celona "Srortcut" approximation
+#' McNamee-Celona "Shortcut" approximation
 #'
 #' Returns a discrete approximation of a continuous distribution using
 #' McNamee-Celona "Shortcut" method.
@@ -24,13 +24,13 @@ NULL
 #'
 #' @references \itemize{
 #' \item McNamee P., Celona J. \emph{Decision Analysis for the Professional
-#' with Supertree}, Scientiifc Press, Redwood City, CA, 1987.
+#' with Supertree}, Scientific Press, Redwood City, CA, 1987.
 #' \item Keefer L.D. \emph{Certainty Equivalents for Three-Point Discrete-
 #' Distribution Approximations}, Management Science 40(6): 760-773, 1994.
 #' }
 #'
 #' @seealso \code{\link{extended_swanson_megill}},
-#' \code{\link{extended_pearson_tukey}}
+#' \code{\link{extended_pearson_tukey}}, \code{\link{brown_kahr_peterson_3}}
 #'
 #' @export
 mcnamee_celona <- function(q_fun, params) {

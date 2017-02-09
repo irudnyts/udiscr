@@ -36,16 +36,14 @@ brown_kahr_peterson_3(q_fun = qnorm)
 }
 \references{
 \itemize{
-\item Smith J.E. \emph{Moment Methods for Decision Analysis}. Management
-Science 39(3):340-358, 1993.
 \item Keefer D.L., Bodily S.E. \emph{Three-Point Approximations for
 Continuous Random Variables}. Management Science 29(5):595-609, 1983.
-\item Pearson E.S., Tukey J.W. \emph{Approximate Means and Standard Deviations
-Based on Distances between Percentage Points of Frequency Curves}.
-Biometrika 52(3/4):533-546, 1965.
+\item Brown R.V., Kahr A.S., and Peterson C. \emph{Decision Analysis for the
+Management}, Holt, Rinehart, and Winston, New York, 1974.
 }
 }
 \seealso{
-\code{\link{extended_swanson_megill}}, \code{\link{mcnamee_celona}}
+\code{\link{extended_swanson_megill}}, \code{\link{mcnamee_celona}},
+\code{\link{extended_pearson_tukey}}
 }
 

@@ -41,6 +41,7 @@ Distribution Approximations}, Management Science 40(6): 760-773, 1994.
 }
 }
 \seealso{
-\code{\link{extended_pearson_tukey}}, \code{\link{mcnamee_celona}}
+\code{\link{extended_pearson_tukey}}, \code{\link{mcnamee_celona}},
+\code{\link{brown_kahr_peterson_3}}
 }
 

@@ -2,7 +2,7 @@
 % Please edit documentation in R/mcnamee_celona.R
 \name{mcnamee_celona}
 \alias{mcnamee_celona}
-\title{McNamee-Celona "Srortcut" approximation}
+\title{McNamee-Celona "Shortcut" approximation}
 \usage{
 mcnamee_celona(q_fun, params)
 }
@@ -35,13 +35,13 @@ mcnamee_celona(q_fun = q)
 \references{
 \itemize{
 \item McNamee P., Celona J. \emph{Decision Analysis for the Professional
-with Supertree}, Scientiifc Press, Redwood City, CA, 1987.
+with Supertree}, Scientific Press, Redwood City, CA, 1987.
 \item Keefer L.D. \emph{Certainty Equivalents for Three-Point Discrete-
 Distribution Approximations}, Management Science 40(6): 760-773, 1994.
 }
 }
 \seealso{
 \code{\link{extended_swanson_megill}},
-\code{\link{extended_pearson_tukey}}
+\code{\link{extended_pearson_tukey}}, \code{\link{brown_kahr_peterson_3}}
 }
 
