@@ -75,11 +75,7 @@ bracket_mean <- function(n = 3, p = rep(1 / n, n), q_fun, d_fun, params) {
 
     # define quantile function, which includes all parameters and  depends only
     # on probability
-    q <- function(p) {
-        args <- params
-        args[["p"]] <- p
-        do.call(what = q_fun, args = args)
-    }
+    q <- qf(q_fun = q_fun, params = params)
 
     # calculate lower and upper bounds of integrals by applying quantile
     # function
@@ -87,11 +83,7 @@ bracket_mean <- function(n = 3, p = rep(1 / n, n), q_fun, d_fun, params) {
     upper_bounds <- q(cum_probs)
 
     # integrated function, which icludes all parameters and depends only on x
-    f <- function(x) {
-        args <- params
-        args[["x"]] <- x
-        x * do.call(what = d_fun, args = args)
-    }
+    f <- x_pdf(d_fun = d_fun, params = params)
 
     discr <- list()
     for(i in seq_along(p)) {

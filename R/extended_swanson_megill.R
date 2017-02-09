@@ -27,12 +27,7 @@
 #' @export
 extended_swanson_megill <- function(q_fun, params) {
     if(missing(params)) params <- list()
-
-    q <- function(p) {
-        args <- params
-        args[["p"]] <- p
-        do.call(what = q_fun, args = args)
-    }
+    q <- qf(q_fun = q_fun, params = params)
 
     return(list(list(prob = 0.3,
                      point = q(0.1)),

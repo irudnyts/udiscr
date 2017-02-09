@@ -75,11 +75,7 @@ bracket_median <- function(n = 3, p = rep(1 / n, n), q_fun, params) {
 
     # define quantile function, which includes all parameters and  depends only
     # on probability
-    q <- function(p) {
-        args <- params
-        args[["p"]] <- p
-        do.call(what = q_fun, args = args)
-    }
+    q <- qf(q_fun = q_fun, params = params)
 
     discr <- Map(function(x, y) list(prob = x, point = y),
                  p, q(probs))
