@@ -26,6 +26,10 @@ with probabilities 0.3, 0.4, and 0.3, respectively.
 extended_swanson_megill(q_fun = qnorm, params = list(mean = 3, sd = 2))
 extended_swanson_megill(q_fun = qgamma, params = list(shape = 3, rate = 2.2))
 extended_swanson_megill(q_fun = qexp)
+# using sample data
+sample <- rnorm(100) + rexp(100)
+q <- function(p) quantile(x = sample, probs = p)
+extended_swanson_megill(q_fun = q)
 
 }
 \references{

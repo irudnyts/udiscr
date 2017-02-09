@@ -26,6 +26,10 @@ with probabilities 0.185, 0.630, and 0.185, respectively.
 extended_pearson_tukey(q_fun = qnorm, params = list(mean = 3, sd = 2))
 extended_pearson_tukey(q_fun = qlnorm, params = list(meanlog = 3, sdlog = 2))
 bracket_median(q_fun = qexp)
+# using sample data
+sample <- rnorm(100) + rexp(100)
+q <- function(p) quantile(x = sample, probs = p)
+extended_pearson_tukey(q_fun = q)
 
 }
 \references{

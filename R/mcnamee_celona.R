@@ -17,6 +17,10 @@ NULL
 #' mcnamee_celona(q_fun = qnorm, params = list(mean = 3, sd = 2))
 #' mcnamee_celona(q_fun = qgamma, params = list(shape = 3, rate = 2.2))
 #' mcnamee_celona(q_fun = qexp)
+#' # using sample data
+#' sample <- rnorm(100) + rexp(100)
+#' q <- function(p) quantile(x = sample, probs = p)
+#' mcnamee_celona(q_fun = q)
 #'
 #' @references \itemize{
 #' \item McNamee P., Celona J. \emph{Decision Analysis for the Professional

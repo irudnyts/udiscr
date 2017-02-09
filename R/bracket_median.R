@@ -26,6 +26,11 @@ NULL
 #' bracket_median(n = 5, q_fun = qnorm, params = list(mean = 3, sd = 2))
 #' bracket_median(p = c(1/2, 1/3, 1/6), q_fun = qexp, params = list(rate = 1))
 #' bracket_median(q_fun = qnorm)
+#' # using sample data
+#' sample <- rnorm(100) + rexp(100)
+#' q <- function(p) quantile(x = sample, probs = p)
+#' bracket_median(q_fun = q)
+
 #'
 #' @references \itemize{
 #' \item Miller III A.C., Rice T.R. \emph{Discrete Approximations of Probability
