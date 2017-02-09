@@ -2,6 +2,7 @@
 
 export(bracket_mean)
 export(bracket_median)
+export(brown_kahr_peterson_3)
 export(extended_pearson_tukey)
 export(extended_swanson_megill)
 export(mcnamee_celona)

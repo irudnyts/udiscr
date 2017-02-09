@@ -1,26 +1,28 @@
 #' @include p_functions.R
 NULL
 
-#' Extended Pearson-Tukey three-point approximation
+#' Three-point approximation, proposed by Brown, Kahr, and Peterson
 #'
 #' Returns a discrete approximation of a continuous distribution using
-#' extended Person-Tukey method.
+#' three-point approximation, proposed by Brown, Kahr, and Peterson.
 #'
-#' Method approximate a continuous distribution by 0.05, 0.5, and 0.95 quantiles
-#' with probabilities 0.185, 0.630, and 0.185, respectively.
+#' Note: only distribution with finite quantiles are supported.
 #'
 #' @param q_fun quantile function.
 #' @param params a list of parameters of the distribution.
 #' @return a list of pairs probability-outcome.
 #'
 #' @examples
-#' extended_pearson_tukey(q_fun = qnorm, params = list(mean = 3, sd = 2))
-#' extended_pearson_tukey(q_fun = qlnorm, params = list(meanlog = 3, sdlog = 2))
-#' extended_pearson_tukey(q_fun = qexp)
+#' brown_kahr_peterson_3(q_fun = qbeta, params = list(shape1 = 2, shape2 = 3))
+#' brown_kahr_peterson_3(q_fun = qunif)
 #' # using sample data
 #' sample <- rnorm(100) + rexp(100)
 #' q <- function(p) quantile(x = sample, probs = p)
-#' extended_pearson_tukey(q_fun = q)
+#' brown_kahr_peterson_3(q_fun = q)
+#'
+#' \dontrun{
+#' brown_kahr_peterson_3(q_fun = qnorm)
+#' }
 #'
 #' @references \itemize{
 #' \item Smith J.E. \emph{Moment Methods for Decision Analysis}. Management
@@ -35,14 +37,16 @@ NULL
 #' @seealso \code{\link{extended_swanson_megill}}, \code{\link{mcnamee_celona}}
 #'
 #' @export
-extended_pearson_tukey <- function(q_fun, params) {
+brown_kahr_peterson_3 <- function(q_fun, params) {
     if(missing(params)) params <- list()
     q <- qf(q_fun = q_fun, params = params)
-
-    return(list(list(prob = 0.185,
-                     point = q(0.05)),
-                list(prob = 0.630,
-                     point = q(0.5)),
-                list(prob = 0.185,
-                     point = q(0.95))))
+    if(q(0) == -Inf || q(1)  == Inf)
+        stop(paste("Only distribution with finite quantiles are supported",
+                   "by this approximation."))
+    return(list(list(prob = 0.25,
+                     point = (3 * q(0) + 5 * q(0.5)) / 8),
+                list(prob = 0.5,
+                     point = (q(0) + 14 * q(0.5) + q(1)) / 16),
+                list(prob = 0.25,
+                     point = (5 * q(0.5) + 3 * q(1)) / 8)))
 }

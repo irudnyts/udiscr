@@ -1,7 +1,7 @@
 #' @include p_functions.R
 NULL
 
-#' Extended Swanson-Megill Three-Point approximation
+#' Extended Swanson-Megill three-point approximation
 #'
 #' Returns a discrete approximation of a continuous distribution using
 #' extended Swanson-Megill method.

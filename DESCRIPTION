@@ -22,6 +22,7 @@ Collate:
     'p_functions.R'
     'bracket_mean.R'
     'bracket_median.R'
+    'brown_kahr_peterson_3.R'
     'extended_pearson_tukey.R'
     'extended_swanson_megill.R'
     'mcnamee_celona.R'
