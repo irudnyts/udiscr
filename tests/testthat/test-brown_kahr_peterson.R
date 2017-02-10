@@ -1,4 +1,4 @@
-context("Brown, Kahr, and Peterson method")
+context("Brown, Kahr, and Peterson methods")
 
 test_that("brown_kahr_peterson_3 checks argument params on validity corretly", {
     expect_silent(brown_kahr_peterson_3(q_fun = qunif, params = list()))
