@@ -56,4 +56,3 @@ Science 39(3):340-358, 1993.
 \seealso{
 \code{\link{bracket_median}}
 }
-

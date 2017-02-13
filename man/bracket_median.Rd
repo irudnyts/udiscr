@@ -56,4 +56,3 @@ Continuous Random Variables}. Management Science 29(5):595-609, 1983.
 \seealso{
 \code{\link{bracket_mean}}
 }
-
