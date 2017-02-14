@@ -1,7 +1,6 @@
 #' @include p_functions.R
 NULL
 
-
 #' Three-point approximation, proposed by Brown, Kahr, and Peterson
 #'
 #' Returns a discrete approximation of a continuous distribution using
