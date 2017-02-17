@@ -46,3 +46,4 @@ Management}, Holt, Rinehart, and Winston, New York, 1974.
 \code{\link{extended_swanson_megill}}, \code{\link{mcnamee_celona}},
 \code{\link{extended_pearson_tukey}}
 }
+

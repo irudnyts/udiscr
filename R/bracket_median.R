@@ -30,7 +30,6 @@ NULL
 #' sample <- rnorm(100) + rexp(100)
 #' q <- function(p) quantile(x = sample, probs = p)
 #' bracket_median(q_fun = q)
-
 #'
 #' @references \itemize{
 #' \item Miller III A.C., Rice T.R. \emph{Discrete Approximations of Probability
