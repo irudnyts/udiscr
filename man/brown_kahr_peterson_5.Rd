@@ -2,7 +2,7 @@
 % Please edit documentation in R/brown_kahr_peterson.R
 \name{brown_kahr_peterson_5}
 \alias{brown_kahr_peterson_5}
-\title{Three-point approximation, proposed by Brown, Kahr, and Peterson}
+\title{Five-point approximation, proposed by Brown, Kahr, and Peterson}
 \usage{
 brown_kahr_peterson_5(q_fun, params)
 }
@@ -16,21 +16,21 @@ a list of pairs probability-outcome.
 }
 \description{
 Returns a discrete approximation of a continuous distribution using
-three-point approximation, proposed by Brown, Kahr, and Peterson.
+five-point approximation, proposed by Brown, Kahr, and Peterson.
 }
 \details{
 Note: only distribution with finite quantiles are supported.
 }
 \examples{
-brown_kahr_peterson_3(q_fun = qbeta, params = list(shape1 = 2, shape2 = 3))
-brown_kahr_peterson_3(q_fun = qunif)
+brown_kahr_peterson_5(q_fun = qbeta, params = list(shape1 = 2, shape2 = 3))
+brown_kahr_peterson_5(q_fun = qunif)
 # using sample data
 sample <- rnorm(100) + rexp(100)
 q <- function(p) quantile(x = sample, probs = p)
-brown_kahr_peterson_3(q_fun = q)
+brown_kahr_peterson_5(q_fun = q)
 
 \dontrun{
-brown_kahr_peterson_3(q_fun = qnorm)
+brown_kahr_peterson_5(q_fun = qnorm)
 }
 
 }
